@@ -1,5 +1,5 @@
-$primary-color: orange;
-$secondary-color: gold !default;
+@import "colors";
+
 $font-stack: 'Open Sans', Helvetica, Sans-Serif;
 $border-thick: 10px;
 $border-bright: orange;
@@ -9,7 +9,7 @@ $article-padding: 20px;
 $article-margin: auto;
 
 body {
-  color: $primary-color;
+  color: #112233 * 2;
   background: $secondary-color;
 }
 
@@ -18,4 +18,91 @@ article {
   width: $article-width;
   padding: $article-padding;
   margin: $article-margin;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+aside {
+  border: 1px solid orange;
+  @include border-radius(7px);
+}
+
+%alert {
+  padding: 10px;
+  background-color: silver;
+  color: white;
+}
+
+.important {
+  @extend %alert;
+  font-weight: bold;
+  font-size: larger;;
+}
+
+.important-error {
+  @extend .important;
+  background-color: red;
+}
+
+.info {
+  @extend %alert;
+  background-color: dodgerblue;
+}
+
+.success {
+  @extend %alert;
+  background-color: green;
+}
+
+.error {
+  @extend %alert;
+  background-color: red;
+}
+
+.warning {
+  @extend %alert;
+  background-color: orange;
+}
+
+.container {
+  width: 100%;
+}
+
+article {
+  float: left;
+  width: 700px / 960px * 100%;
+}
+
+.sidebar {
+  float: right;
+  width: 200px / 960px * 100%;
+}
+
+img { 
+  cursor: zoom + -in;
+}
+
+div {
+  padding: 20px;
+  margin: 20px;
+}
+.one {
+  background: red;
+}
+.two {
+  background: yellow;
+}
+.three {
+  background: mix(red, yellow);
+}
+.four {
+  background: mix(red, yellow, 35%);
+}
+.five {
+  background: mix(red, yellow, 65%);
 }

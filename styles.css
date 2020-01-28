@@ -1,5 +1,5 @@
 body {
-  color: orange;
+  color: #224466;
   background: gold; }
 
 article {
@@ -7,5 +7,69 @@ article {
   width: 60%;
   padding: 20px;
   margin: auto; }
+
+aside {
+  border: 1px solid orange;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px; }
+
+.important, .important-error, .info, .success, .error, .warning {
+  padding: 10px;
+  background-color: silver;
+  color: white; }
+
+.important, .important-error {
+  font-weight: bold;
+  font-size: larger; }
+
+.important-error {
+  background-color: red; }
+
+.info {
+  background-color: dodgerblue; }
+
+.success {
+  background-color: green; }
+
+.error {
+  background-color: red; }
+
+.warning {
+  background-color: orange; }
+
+.container {
+  width: 100%; }
+
+article {
+  float: left;
+  width: 72.9166666667%; }
+
+.sidebar {
+  float: right;
+  width: 20.8333333333%; }
+
+img {
+  cursor: zoom-in; }
+
+div {
+  padding: 20px;
+  margin: 20px; }
+
+.one {
+  background: red; }
+
+.two {
+  background: yellow; }
+
+.three {
+  background: #ff8000; }
+
+.four {
+  background: #ffa600; }
+
+.five {
+  background: #ff5900; }
 
 /*# sourceMappingURL=styles.css.map */
